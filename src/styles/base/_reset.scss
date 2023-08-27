@@ -16,6 +16,7 @@ html {
 }
 
 body {
+  @include typography.font-sans;
   @include typography.font-size('lg');
 
   background-color: variables.$color-neutral-01;
