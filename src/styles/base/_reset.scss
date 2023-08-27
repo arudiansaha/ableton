@@ -1,0 +1,48 @@
+@use './typography' as typography;
+@use '../abstracts/variables' as variables;
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @include typography.font-size('lg');
+
+  background-color: variables.$color-neutral-01;
+  color: variables.$color-neutral-00;
+}
+
+picture,
+img,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  overflow-wrap: break-word;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
