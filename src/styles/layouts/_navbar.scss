@@ -1,0 +1,76 @@
+@use '../abstracts/mixins' as mixins;
+@use '../abstracts/variables' as variables;
+@use '../base/typography' as typography;
+@use '../components/buttons' as buttons;
+
+.navbar {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  padding-block: 0.5em;
+  transform: translateY(-32rem);
+  transition: transform 800ms ease-in-out;
+  background-color: variables.$color-neutral-01;
+  color: variables.$color-neutral-00;
+
+  &.active {
+    transform: translate(0);
+    background-color: variables.$color-primary-00;
+    color: variables.$color-neutral-01;
+  }
+
+  &__list {
+    @include mixins.reset-list;
+  }
+
+  &__item {
+    &>a {
+      @include mixins.reset-anchor;
+
+      display: block;
+      width: fit-content;
+      padding-block: 0.5em;
+      padding-inline: 1em;
+    }
+  }
+
+  &__button {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar {
+    position: static;
+    transform: translateY(0);
+    transition: none;
+
+    &.active {
+      background-color: variables.$color-neutral-01;
+      color: variables.$color-neutral-00;
+    }
+
+    &__list {
+      display: flex;
+      align-items: center
+    }
+
+    &__item {
+      &--blue {
+        margin-inline-start: auto;
+        color: variables.$color-primary-00;
+      }
+    }
+
+    &__button {
+      @include buttons.common;
+
+      display: flex;
+      color: variables.$color-primary-01;
+
+      &>svg {
+        display: inline-block;
+      }
+    }
+  }
+}

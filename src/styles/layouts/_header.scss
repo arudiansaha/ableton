@@ -1,0 +1,71 @@
+@use '../abstracts/mixins' as mixins;
+@use '../abstracts/variables' as variables;
+@use '../components/buttons' as buttons;
+
+.header {
+  position: relative;
+  border-bottom: 2px solid variables.$color-neutral-02;
+  background-color: variables.$color-neutral-01;
+  color: variables.$color-neutral-00;
+
+  &.active {
+    background-color: variables.$color-primary-00;
+    color: variables.$color-neutral-01;
+  }
+
+  &__bar {
+    position: relative;
+    z-index: 20;
+    display: flex;
+    align-items: flex-end;
+    background-color: inherit;
+    color: inherit;
+  }
+
+  &__logo {
+    @include mixins.reset-anchor;
+
+    display: block;
+    padding: 1em;
+
+    &>svg {
+      width: 3.75rem;
+      height: 1.75rem;
+      background-color: inherit;
+      color: inherit;
+    }
+  }
+
+  &__button {
+    @include buttons.common;
+
+    &>svg {
+      display: inline-block;
+      transform: rotate(0);
+      transition: transform 800ms ease;
+
+      &.active {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    display: flex;
+
+    &.active {
+      background-color: variables.$color-neutral-01;
+      color: variables.$color-neutral-00;
+    }
+
+    &__bar {
+      align-items: center;
+    }
+
+    &__button {
+      display: none;
+    }
+  }
+}

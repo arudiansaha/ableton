@@ -1,0 +1,9 @@
+@mixin common {
+  cursor: pointer;
+
+  padding-block: 0.5em;
+  padding-inline: 1em;
+  border: none;
+  background-color: inherit;
+  color: inherit;
+}
