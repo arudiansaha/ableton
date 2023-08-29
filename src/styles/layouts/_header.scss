@@ -39,6 +39,9 @@
   &__button {
     @include buttons.common;
 
+    padding-block: 0.75em;
+    padding-inline: 1.125em;
+
     &>svg {
       display: inline-block;
       transform: rotate(0);
@@ -54,6 +57,7 @@
 @media (min-width: 1024px) {
   .header {
     display: flex;
+    align-items: center;
 
     &.active {
       background-color: variables.$color-neutral-01;

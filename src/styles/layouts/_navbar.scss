@@ -7,7 +7,6 @@
   position: absolute;
   z-index: 10;
   width: 100%;
-  padding-block: 0.5em;
   transform: translateY(-32rem);
   transition: transform 800ms ease-in-out;
   background-color: variables.$color-neutral-01;
@@ -17,6 +16,22 @@
     transform: translate(0);
     background-color: variables.$color-primary-00;
     color: variables.$color-neutral-01;
+  }
+
+  &__secondary {
+    &>.navbar__list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      &>.navbar__item {
+        text-transform: capitalize;
+
+        &.active {
+          color: variables.$color-primary-01;
+        }
+      }
+    }
   }
 
   &__list {
@@ -29,8 +44,8 @@
 
       display: block;
       width: fit-content;
-      padding-block: 0.5em;
-      padding-inline: 1em;
+      padding-block: 0.75em;
+      padding-inline: 1.125em;
     }
   }
 
@@ -52,7 +67,7 @@
 
     &__list {
       display: flex;
-      align-items: center
+      align-items: center;
     }
 
     &__item {
@@ -66,6 +81,8 @@
       @include buttons.common;
 
       display: flex;
+      padding-block: 0.75em;
+      padding-inline: 1.125em;
       color: variables.$color-primary-01;
 
       &>svg {

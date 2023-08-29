@@ -23,9 +23,7 @@ function App() {
         <AbletonLogo onClick={menuHandler} />
         <Navbar onClick={() => { }} />
       </NavigationHeader>
-      <main>
-        <About />
-      </main>
+      <About />
     </MenuProvider>
   );
 }
