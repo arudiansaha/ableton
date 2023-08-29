@@ -47,7 +47,7 @@ function Navbar({ onClick }: NavbarProps) {
           <a href="#">Try Live for free</a>
         </li>
         <li className="navbar__item">
-          <a href="#">Try Live for free</a>
+          <a href="#">Log in or register</a>
         </li>
       </ul>
     </nav>

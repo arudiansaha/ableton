@@ -47,3 +47,9 @@ textarea,
 select {
   font: inherit;
 }
+
+@media (min-width: 1280px) {
+  body {
+    @include typography.font-size('lg');
+  }
+}
