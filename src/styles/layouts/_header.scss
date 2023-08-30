@@ -73,3 +73,11 @@
     }
   }
 }
+
+@media (min-width: 1280px) {
+  .header {
+    max-width: 1600px;
+    margin-inline: auto;
+    padding-inline: 2rem;
+  }
+}
