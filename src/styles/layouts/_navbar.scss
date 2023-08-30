@@ -19,9 +19,6 @@
   }
 
   &__secondary {
-    max-width: 1600px;
-    margin-inline: auto;
-    padding-inline: 2rem;
     background-color: variables.$color-neutral-01;
     color: variables.$color-neutral-00;
 
@@ -94,6 +91,16 @@
       &>svg {
         display: inline-block;
       }
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .navbar {
+    &__secondary {
+      max-width: 1600px;
+      margin-inline: auto;
+      padding-inline: 2rem;
     }
   }
 }
