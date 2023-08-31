@@ -1,0 +1,15 @@
+@use '../abstracts/variables' as variables;
+
+.dropdown {
+  &__select {
+    padding-block: 0.75em;
+    padding-inline: 1.125em;
+    text-transform: capitalize;
+    border: none;
+    background-color: variables.$color-neutral-02;
+  }
+
+  &__option {
+    padding: 1em;
+  }
+}

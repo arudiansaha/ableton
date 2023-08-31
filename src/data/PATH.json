@@ -1,0 +1,44 @@
+{
+    "ableton": [
+        {
+            "url": "#register-live-or-push",
+            "value": "Register Live or Push >"
+        },
+        {
+            "url": "#about-albeton",
+            "value": "About Albeton >"
+        },
+        {
+            "url": "#jobs",
+            "value": "Jobs >"
+        }
+    ],
+    "education": [
+        {
+            "url": "#offers-for-students-and-teachers",
+            "value": "Offers for students and teachers >"
+        },
+        {
+            "url": "#ableton-for-the-classroom",
+            "value": "Ableton for the Classroom >"
+        },
+        {
+            "url": "#ableto-for-colleges-and-universities",
+            "value": "Ableton for Colleges and Universities >"
+        }
+    ],
+    "community": [
+        {
+            "url": "#find-ableton-user-groups",
+            "value": "Find Ableton User Groups >"
+        },
+        {
+            "url": "#find-certified-training",
+            "value": "Find Certified Training >"
+        },
+        {
+            "url": "#become-a-certified-trainer",
+            "value": "Become a Certified Trainer >"
+        }
+    ]
+}

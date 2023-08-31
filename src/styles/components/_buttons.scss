@@ -1,9 +1,18 @@
+@use '../abstracts/variables' as variables;
+
 @mixin common {
   cursor: pointer;
 
-  padding-block: 0.5em;
-  padding-inline: 1em;
+  padding-block: 0.75em;
+  padding-inline: 1.125em;
   border: none;
   background-color: inherit;
   color: inherit;
+}
+
+@mixin primary {
+  @include common;
+
+  background-color: variables.$color-primary-00;
+  color: variables.$color-neutral-01;
 }

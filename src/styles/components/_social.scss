@@ -1,0 +1,19 @@
+@use '../abstracts/mixins' as mixins;
+@use '../abstracts/variables' as variables;
+
+.social {
+  &__list {
+    @include mixins.reset-list;
+
+    display: flex;
+    gap: 0.5em;
+  }
+
+  &__item>a {
+    @include mixins.reset-anchor;
+
+    display: inline-block;
+    padding: 1em;
+    color: variables.$color-neutral-01;
+  }
+}

@@ -1,0 +1,18 @@
+@use '../abstracts/variables' as variables;
+@use '../components/buttons' as buttons;
+
+.form {
+  display: flex;
+
+  &__input {
+    width: 50%;
+    padding-block: 0.75em;
+    padding-inline: 1.125em;
+    border: none;
+    background-color: variables.$color-neutral-02;
+  }
+
+  &__button {
+    @include buttons.primary;
+  }
+}
