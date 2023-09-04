@@ -1,0 +1,74 @@
+@use '../abstracts/variables' as variables;
+@use '../abstracts/mixins' as mixins;
+@use '../base/typography' as typography;
+
+.about {
+  max-width: 1600px;
+  margin-inline: auto;
+  padding-block: 2rem;
+  padding-inline: 2rem;
+  background-color: variables.$color-neutral-01;
+  color: variables.$color-neutral-00;
+
+  &__hero {
+    position: relative;
+    margin-block-end: 3rem;
+
+    &>h1 {
+      @include typography.font-size('5xl');
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: variables.$color-primary-01;
+    }
+  }
+
+  &__section {
+    max-width: 720px;
+    margin-inline: auto;
+
+    &>h2 {
+      @include typography.font-size('lg');
+
+      margin-block-end: 1rem;
+
+      &>a {
+        @include mixins.reset-anchor;
+
+        color: variables.$color-primary-00;
+      }
+    }
+
+    &>p {
+      margin-block-end: 1rem;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .about {
+    &__hero {
+      &>h1 {
+        @include typography.font-size('7xl');
+      }
+    }
+
+    &__section {
+      &>h2 {
+        @include typography.font-size('2xl');
+      }
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .about {
+    &__hero {
+      &>h1 {
+        @include typography.font-size('9xl');
+      }
+    }
+  }
+}
