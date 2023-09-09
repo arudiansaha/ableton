@@ -5,7 +5,7 @@
 .about {
   max-width: 1600px;
   margin-inline: auto;
-  padding: 2rem;
+  padding-inline: 2rem;
   background-color: variables.$color-neutral-01;
   color: variables.$color-neutral-00;
 
@@ -13,7 +13,7 @@
     position: relative;
     margin-block-end: 3rem;
 
-    &>h1 {
+    &>.about__title {
       @include typography.font-size('5xl');
 
       position: absolute;
@@ -24,24 +24,20 @@
     }
   }
 
-  &__section {
+  &__description {
     max-width: 720px;
     margin-inline: auto;
+  }
 
-    &>h2 {
-      @include typography.font-size('lg');
+  &__title {
+    @include typography.font-size('lg');
 
-      margin-block-end: 1rem;
+    margin-block-end: 1rem;
 
-      &>a {
-        @include mixins.reset-anchor;
+    &>a {
+      @include mixins.reset-anchor;
 
-        color: variables.$color-primary-00;
-      }
-    }
-
-    &>p {
-      margin-block-end: 1rem;
+      color: variables.$color-primary-00;
     }
   }
 }
@@ -49,23 +45,23 @@
 @media (min-width: 768px) {
   .about {
     &__hero {
-      &>h1 {
+      &>.about__title {
         @include typography.font-size('7xl');
       }
     }
 
-    &__section {
-      &>h2 {
-        @include typography.font-size('2xl');
-      }
+    &__title {
+      @include typography.font-size('2xl');
     }
   }
 }
 
 @media (min-width: 1280px) {
   .about {
+    padding-inline: 3rem;
+
     &__hero {
-      &>h1 {
+      &>.about__title {
         @include typography.font-size('9xl');
       }
     }
